@@ -16,7 +16,15 @@ Route::get('/', function () {
 });
 
 Route::get('/model', function () {
-    $products = \App\Product::all(); // select * from products
+    //$products = \App\Product::all(); // select * from products
 
-    return $products;
+    // $user = new \App\User();
+    // $user->name = 'Usuário Teste';
+    // $user->email = 'email@teste.com';
+    // $user->password = bcrypt('12345678');
+    // $user->save();
+
+    //return $user->save();
+
+    return \App\User::all();
 });
