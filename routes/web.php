@@ -30,5 +30,20 @@ Route::get('/model', function () {
         // \App\User::where('name', 'Pedro Lucas')->get(); 
         // \App\User::paginate(10); - paginar dados com Laravel
 
-    return \App\User::paginate(10);
+
+    // Mass Assignment - atribuição em massa
+    // $user = \App\User::create([
+    //     'name' => 'Pedro Lucas Guerra',
+    //     'email' => 'email@email.com',
+    //     'password' => bcrypt('123345566')
+    // ]);
+
+    // Mass Update
+    $user = \App\User::find(42);
+    // $user = $user->update([ // -> retorna true ou false
+    $user->update([             // -> retorna o objeto
+        'name' => 'Atualizando com Mass Update'
+    ]); //true ou false
+
+    return \App\User::paginate(43);
 });
