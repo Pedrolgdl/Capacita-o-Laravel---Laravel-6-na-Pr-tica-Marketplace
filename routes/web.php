@@ -22,9 +22,13 @@ Route::get('/model', function () {
     // $user->name = 'Usuário Teste';
     // $user->email = 'email@teste.com';
     // $user->password = bcrypt('12345678');
+
     // $user->save();
+    //return 
+        // \App\User::all() - retorna todos os usuários;
+        // \App\User::find(3) - retorna o usuário com vase no id;
+        // \App\User::where('name', 'Pedro Lucas')->get(); 
+        // \App\User::paginate(10); - paginar dados com Laravel
 
-    //return $user->save();
-
-    return \App\User::all();
+    return \App\User::paginate(10);
 });
