@@ -38,12 +38,12 @@ Route::get('/model', function () {
     //     'password' => bcrypt('123345566')
     // ]);
 
-    // Mass Update
-    $user = \App\User::find(42);
-    // $user = $user->update([ // -> retorna true ou false
-    $user->update([             // -> retorna o objeto
-        'name' => 'Atualizando com Mass Update'
-    ]); //true ou false
+    // // Mass Update
+    // $user = \App\User::find(42);
+    // // $user = $user->update([ // -> retorna true ou false
+    // $user->update([             // -> retorna o objeto
+    //     'name' => 'Atualizando com Mass Update'
+    // ]); //true ou false
 
     return \App\User::paginate(43);
 });
