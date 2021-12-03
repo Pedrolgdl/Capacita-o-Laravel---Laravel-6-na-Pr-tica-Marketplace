@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/model', function () {
+    $products = \App\Product::all(); // select * from products
+
+    return $products;
+});
