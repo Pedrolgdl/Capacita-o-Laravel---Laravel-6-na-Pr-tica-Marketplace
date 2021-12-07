@@ -57,5 +57,49 @@ Route::get('/model', function () {
     // $category = \App\Category::find(1);
     // return $category->products; | $category->products();
 
-    return \App\User::paginate(43);
+
+    //Criar uma loja pra um usuario
+    // $user = \App\User::find(10);
+    // $store = $user->store()->create([
+    //     'name' => 'Loja Teste',
+    //     'description' => 'Loja teste de produtos de informática',
+    //     'mobile_phone' => 'XX-XXXXX-XXXX',
+    //     'phone' => 'XX-XXXXX-XXXX',
+    //     'slug' => 'loja-teste'
+    // ]);
+
+    //Criar um produto para uma loja
+    // $store = \App\Store::find(41);
+    // $product = $store->products()->create([
+    //     'name' => 'Notebook Dell',
+    //     'description' => 'Core i5 10GB',
+    //     'body' => 'Qualquer coisa...',
+    //     'price' => 2999.90,
+    //     'slug' => 'notebook-dell',
+    // ]);
+
+    // dd($product);
+
+    //Criar uma categoria
+    // \App\Category::create([
+    //     'name' => 'Games',
+    //     'description' => null,
+    //     'slug' => 'games'
+    // ]);
+
+    // \App\Category::create([
+    //     'name' => 'Notebooks',
+    //     'description' => null,
+    //     'slug' => 'notebooks'
+    // ]);
+
+    // return \App\Category::all();
+
+    //Adicionar um produto para uma categoria ou vice-versa
+    // $product = \App\Product::find(41);
+    // dd($product->categories()->sync([2]));
+
+    $product = \App\Product::find(41);
+
+    return $product->categories;
 });
