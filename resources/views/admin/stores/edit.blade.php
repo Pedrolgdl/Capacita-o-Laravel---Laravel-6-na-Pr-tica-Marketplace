@@ -25,7 +25,7 @@
         </div>
 
         <div class="form-group">
-            <label>slug</label>
+            <label>Slug</label>
             <input type="text" name="slug" class="form-control" value="{{$store->slug}}">
         </div>        
 
