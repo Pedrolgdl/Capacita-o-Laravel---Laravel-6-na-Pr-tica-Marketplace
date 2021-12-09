@@ -3,8 +3,9 @@
 @section('content')
     <h1>Atualizar Produto</h1>
 
-    <form action="{{route('admin.products.store')}}" method="post">
-        <input type="hidden" name="_token" value="{{csrf_token()}}">
+    <form action="{{route('admin.products.update', ['product' => $product->id])}}" method="post">
+        @csrf
+        @method("PUT")
 
         <div class="form-group">
             <label>Nome Produto</label>
