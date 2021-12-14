@@ -10,7 +10,7 @@ class StoreController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('user.has.store')->only(['create', 'store']);
+        $this->middleware('user.has.store')->only(['create', 'store']); //executa para apenas create e store
     }
 
     public function index()
